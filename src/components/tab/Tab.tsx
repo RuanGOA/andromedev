@@ -8,8 +8,6 @@ interface Props {
   items: string[]
 }
 
-//const items = ['Organização', 'Mentor', 'Aprendiz']
-
 export const Tab = ({ items }: Props) => {
   const [currentItem, setCurrentItem] = useState('')
 
