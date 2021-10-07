@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-import { HStack, Box } from '@chakra-ui/react'
+import { HStack } from '@chakra-ui/react'
 
 import TabItem from './TabItem'
 
