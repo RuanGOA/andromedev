@@ -11,7 +11,11 @@ export const TabItem = ({ itemValue }: Props) => {
   const tabItemStyle = useStyleConfig('TabItem')
 
   return (
-    <Tab css={css(tabItemStyle)} _selected={tabItemStyleHighlighted}>
+    <Tab
+      fontSize="sm"
+      css={css(tabItemStyle)}
+      _selected={tabItemStyleHighlighted}
+    >
       {itemValue}
     </Tab>
   )
