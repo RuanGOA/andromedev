@@ -1,31 +1,19 @@
-import { Box } from '@chakra-ui/react'
+import { Tab, useStyleConfig, css } from '@chakra-ui/react'
 
 interface Props {
   itemValue: string
-  setCurrentItem: (itemValue: string) => void
-  currentItem: string
 }
 
-export const TabItem = ({ itemValue, setCurrentItem, currentItem }: Props) => {
+export const TabItem = ({ itemValue }: Props) => {
+  const tabItemStyleHighlighted = useStyleConfig('TabItem', {
+    variant: 'highlighted',
+  })
+  const tabItemStyle = useStyleConfig('TabItem')
+
   return (
-    <Box
-      borderBottom="5px solid"
-      borderColor={
-        itemValue === currentItem
-          ? 'var(--chakra-colors-primary-normal)'
-          : 'transparent'
-      }
-      color={
-        itemValue === currentItem ? 'var(--chakra-colors-primary-normal)' : ''
-      }
-      cursor="pointer"
-      fontWeight="600"
-      fontSize="0.85rem"
-      padding="0.75rem 2rem"
-      onClick={() => setCurrentItem(itemValue)}
-    >
+    <Tab css={css(tabItemStyle)} _selected={tabItemStyleHighlighted}>
       {itemValue}
-    </Box>
+    </Tab>
   )
 }
 
