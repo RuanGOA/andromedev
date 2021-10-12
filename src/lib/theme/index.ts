@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react'
 import Button from './button'
 import ActiveableCard from './activeableCard'
+import TabItem from './tabItem'
 
 const theme = extendTheme({
   colors: {
@@ -18,6 +19,7 @@ const theme = extendTheme({
   components: {
     Button,
     ActiveableCard,
+    TabItem,
   },
   fontWeights: {
     hairline: 100,
